@@ -6,26 +6,31 @@ export default function Hero() {
   return (
     <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
       
-      {/* Full-height background image on the right (Desktop) / Full background with overlay (Mobile) */}
-      <div className="absolute inset-0 md:left-1/2 z-0 animate-fadeUp [animation-delay:150ms]">
+      {/* Full-width background image */}
+      <div className="absolute inset-0 z-0 animate-fadeUp [animation-delay:150ms]">
         <Image 
           src={heroImg} 
           alt="Mother cradling her newborn at home" 
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_right]"
           priority
         />
-        {/* Gradient overlay for mobile text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#EFF2F1] via-[#EFF2F1]/90 to-transparent md:hidden z-10"></div>
-        {/* Smooth gradient fade on the left edge for desktop to blend with the background */}
-        <div className="hidden md:block absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-[#EFF2F1] to-transparent z-10"></div>
+        
+        {/* Gradient overlay: 
+            Mobile: Solid at bottom fading up to transparent.
+            Desktop: Solid at left fading right to transparent (like image 2) */}
+        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#EFF2F1] via-[#EFF2F1] md:via-[#EFF2F1]/80 to-transparent md:to-transparent z-10"></div>
       </div>
 
-      {/* Decorative background shapes for the left side */}
-      <div className="absolute -top-[60px] -left-[80px] w-[340px] h-[340px] bg-accent-warm opacity-35 rounded-[62%_38%_55%_45%/45%_55%_45%_55%] animate-jhFloat z-0"></div>
-      <div className="absolute -bottom-[120px] left-[10%] w-[280px] h-[280px] bg-accent-soft opacity-50 rounded-[50%_50%_35%_65%/55%_45%_60%_40%] animate-jhFloat z-0"></div>
+      {/* Decorative background shapes */}
+      {/* Left warm bubble */}
+      <div className="absolute -top-[60px] -left-[80px] w-[340px] h-[340px] bg-accent-warm opacity-35 rounded-[62%_38%_55%_45%/45%_55%_45%_55%] animate-jhFloat z-10"></div>
+      {/* Right blue bubble (restored as requested) */}
+      <div className="absolute top-[120px] -right-[100px] w-[400px] h-[400px] bg-secondary opacity-30 rounded-[40%_60%_65%_35%/55%_45%_55%_45%] animate-jhFloatSlow z-10 pointer-events-none mix-blend-multiply"></div>
+      {/* Bottom soft bubble */}
+      <div className="absolute -bottom-[120px] left-[10%] w-[280px] h-[280px] bg-accent-soft opacity-50 rounded-[50%_50%_35%_65%/55%_45%_60%_40%] animate-jhFloat z-10"></div>
 
-      <div className="relative z-10 max-w-[1240px] mx-auto w-full px-6 pt-[120px] pb-[80px] md:pt-[72px] md:pb-[96px] flex">
+      <div className="relative z-20 max-w-[1240px] mx-auto w-full px-6 pt-[120px] pb-[80px] md:pt-[72px] md:pb-[96px] flex">
         {/* Content Container (Restricted to left half on desktop) */}
         <div className="w-full md:w-1/2 md:pr-12 animate-fadeUp">
           <div className="font-passionate text-[32px] text-secondary mb-3">Your trusted premium care partner</div>
