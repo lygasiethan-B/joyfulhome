@@ -12,14 +12,14 @@ export default function Hero() {
           src={heroImg} 
           alt="Mother cradling her newborn at home" 
           fill
-          className="object-cover object-[center_right]"
+          className="object-cover object-[80%_center] md:object-[75%_center]"
           priority
         />
         
         {/* Gradient overlay: 
             Mobile: Solid at bottom fading up to transparent.
-            Desktop: Solid at left fading right to transparent (like image 2) */}
-        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#EFF2F1] via-[#EFF2F1] md:via-[#EFF2F1]/80 to-transparent md:to-transparent z-10"></div>
+            Desktop: Solid at left fading right to transparent earlier */}
+        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#EFF2F1] via-[#EFF2F1]/90 via-30% to-transparent to-70% md:to-60% z-10 pointer-events-none"></div>
       </div>
 
       {/* Decorative background shapes */}
