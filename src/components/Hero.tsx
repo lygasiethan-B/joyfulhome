@@ -4,7 +4,7 @@ import heroImg from '../../public/assets/image_1.jpg';
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#EFF2F1]">
       
       {/* Desktop Image: Forced to the right 55% of the screen so it NEVER overlaps text */}
       <div className="hidden md:block absolute top-0 right-0 bottom-0 w-[55%] z-0">
@@ -16,7 +16,7 @@ export default function Hero() {
           priority
         />
         {/* Wide, soft gradient mask fading the light background into the image naturally */}
-        <div className="absolute inset-y-0 left-0 w-[30%] bg-gradient-to-r from-[#EFF2F1] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 left-0 w-[40%] bg-gradient-to-r from-[#EFF2F1] via-[#EFF2F1]/80 to-[#EFF2F1]/0 z-10 pointer-events-none"></div>
       </div>
 
       {/* Mobile Image: Full width, but shifted to extreme right */}
@@ -29,7 +29,7 @@ export default function Hero() {
           priority
         />
         {/* Soft gradient mask for mobile */}
-        <div className="absolute inset-y-0 left-0 w-[30%] bg-gradient-to-r from-[#EFF2F1] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 left-0 w-[40%] bg-gradient-to-r from-[#EFF2F1] via-[#EFF2F1]/80 to-[#EFF2F1]/0 z-10 pointer-events-none"></div>
       </div>
 
       {/* Decorative background shapes */}
