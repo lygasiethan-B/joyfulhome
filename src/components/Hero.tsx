@@ -6,14 +6,8 @@ export default function Hero() {
   return (
     <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#EFF2F1]">
       
-      {/* Desktop Image: Forced to the right 55% of the screen so it NEVER overlaps text */}
-      <div 
-        className="hidden md:block absolute top-0 right-0 bottom-0 w-[55%] z-0"
-        style={{
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 30%)',
-          maskImage: 'linear-gradient(to right, transparent 0%, black 30%)'
-        }}
-      >
+      {/* Full-width background image — same on desktop and mobile */}
+      <div className="absolute inset-0 z-0">
         <Image 
           src={heroImg} 
           alt="Mother cradling her newborn at home" 
@@ -23,22 +17,14 @@ export default function Hero() {
         />
       </div>
 
-      {/* Mobile Image: Full width, but shifted to extreme right */}
+      {/* Full-section gradient overlay: 90% opacity on the LEFT (text area) fading to 10% on the RIGHT (photo area) 
+          Mirrors the technique in the reference editorial image exactly */}
       <div 
-        className="md:hidden absolute inset-0 z-0"
+        className="absolute inset-0 z-10 pointer-events-none"
         style={{
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 30%)',
-          maskImage: 'linear-gradient(to right, transparent 0%, black 30%)'
+          background: 'linear-gradient(to right, rgba(239,242,241,0.92) 0%, rgba(239,242,241,0.75) 35%, rgba(239,242,241,0.35) 60%, rgba(239,242,241,0.08) 100%)'
         }}
-      >
-        <Image 
-          src={heroImg} 
-          alt="Mother cradling her newborn at home" 
-          fill
-          className="object-cover object-[15%_center]"
-          priority
-        />
-      </div>
+      ></div>
 
       {/* Decorative background shapes */}
       {/* Left warm bubble */}
