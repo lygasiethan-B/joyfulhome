@@ -7,7 +7,7 @@ export default function Hero() {
     <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
       
       {/* Desktop Image: Forced to the right 55% of the screen so it NEVER overlaps text */}
-      <div className="hidden md:block absolute top-0 right-0 bottom-0 w-[55%] z-0 [mask-image:linear-gradient(to_right,transparent,black_20%)]">
+      <div className="hidden md:block absolute top-0 right-0 bottom-0 w-[55%] z-0">
         <Image 
           src={heroImg} 
           alt="Mother cradling her newborn at home" 
@@ -15,10 +15,12 @@ export default function Hero() {
           className="object-cover object-right"
           priority
         />
+        {/* Wide, soft gradient mask fading the light background into the image naturally */}
+        <div className="absolute inset-y-0 left-0 w-[30%] bg-gradient-to-r from-[#EFF2F1] to-transparent z-10 pointer-events-none"></div>
       </div>
 
       {/* Mobile Image: Full width, but shifted to extreme right */}
-      <div className="md:hidden absolute inset-0 z-0 [mask-image:linear-gradient(to_right,transparent,black_15%)]">
+      <div className="md:hidden absolute inset-0 z-0">
         <Image 
           src={heroImg} 
           alt="Mother cradling her newborn at home" 
@@ -26,6 +28,8 @@ export default function Hero() {
           className="object-cover object-[15%_center]"
           priority
         />
+        {/* Soft gradient mask for mobile */}
+        <div className="absolute inset-y-0 left-0 w-[30%] bg-gradient-to-r from-[#EFF2F1] to-transparent z-10 pointer-events-none"></div>
       </div>
 
       {/* Decorative background shapes */}
