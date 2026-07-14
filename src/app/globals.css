@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #146B78;
+  --color-secondary: #14B8AA;
+  --color-neutral: #E7ECE9;
+  --color-accent-warm: #D8C3A5;
+  --color-accent-soft: #F1DED9;
+  --color-text-dark: #1F2A2E;
+  
+  --font-sans: var(--font-raleway-local), sans-serif;
+  --font-mali: var(--font-mali-local), cursive;
+  --font-passionate: var(--font-passionate-local), cursive;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #E7ECE9;
+  --foreground: #1F2A2E;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
+}
+
+::selection {
+  background: #14B8AA;
+  color: #fff;
+}
+
+@keyframes jhFloat {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(14px, -18px) rotate(6deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes jhFloatSlow {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-10px, 16px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.animate-jhFloat {
+  animation: jhFloat 12s ease-in-out infinite;
+}
+
+.animate-jhFloatSlow {
+  animation: jhFloatSlow 14s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-jhFloat,
+  .animate-jhFloatSlow {
+    animation: none !important;
+  }
 }
