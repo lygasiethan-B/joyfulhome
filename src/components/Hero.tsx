@@ -6,20 +6,26 @@ export default function Hero() {
   return (
     <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
       
-      {/* Full-width background image */}
-      <div className="absolute inset-0 z-0 animate-fadeUp [animation-delay:150ms]">
+      {/* Desktop Image: Forced to the right 55% of the screen so it NEVER overlaps text */}
+      <div className="hidden md:block absolute top-0 right-0 bottom-0 w-[55%] z-0 [mask-image:linear-gradient(to_right,transparent,black_20%)]">
         <Image 
           src={heroImg} 
           alt="Mother cradling her newborn at home" 
           fill
-          className="object-cover object-[35%_center] md:object-[70%_center]"
+          className="object-cover object-right"
           priority
         />
-        
-        {/* Gradient overlay: 
-            Mobile: Semi-solid on left fading out quickly to the right.
-            Desktop: Solid at left fading right to transparent earlier */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#EFF2F1]/95 from-10% to-transparent to-60% md:from-[#EFF2F1] md:from-0% md:via-[#EFF2F1]/90 md:via-30% md:to-transparent md:to-60% z-10 pointer-events-none"></div>
+      </div>
+
+      {/* Mobile Image: Full width, but shifted to extreme right */}
+      <div className="md:hidden absolute inset-0 z-0 [mask-image:linear-gradient(to_right,transparent,black_15%)]">
+        <Image 
+          src={heroImg} 
+          alt="Mother cradling her newborn at home" 
+          fill
+          className="object-cover object-[15%_center]"
+          priority
+        />
       </div>
 
       {/* Decorative background shapes */}
