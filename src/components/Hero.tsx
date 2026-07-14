@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import heroImg from '../../public/assets/image_1.jpg';
+import heroImg from '../../public/assets/hero_image.png';
 
 export default function Hero() {
   return (
@@ -12,7 +12,7 @@ export default function Hero() {
           src={heroImg} 
           alt="Mother cradling her newborn at home" 
           fill
-          className="object-cover object-center"
+          className="object-contain object-right"
           priority
         />
       </div>
