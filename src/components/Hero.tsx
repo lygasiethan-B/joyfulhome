@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import heroImg from '../../public/assets/image_1.jpg';
 
 export default function Hero() {
   return (
@@ -45,7 +46,7 @@ export default function Hero() {
 
         <div className="relative rounded-[32px] overflow-hidden aspect-[4/5] shadow-[0_30px_60px_-20px_rgba(20,107,120,0.35)] animate-fadeUp [animation-delay:150ms]">
           <Image 
-            src="/assets/image_1.jpg" 
+            src={heroImg} 
             alt="Mother cradling her newborn at home" 
             fill
             className="object-cover"

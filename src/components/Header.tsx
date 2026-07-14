@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import logoImg from '../../public/assets/JoyfulHome Logo Smile.png';
 
 export default function Header() {
   const navLinks = [
@@ -15,7 +16,7 @@ export default function Header() {
       <div className="max-w-[1240px] mx-auto px-6 py-3.5 flex items-center justify-between gap-4 flex-wrap">
         <Link href="#">
           <Image 
-            src="/assets/JoyfulHome Logo Smile.png" 
+            src={logoImg} 
             alt="JoyfulHome" 
             width={140} 
             height={52} 

@@ -1,9 +1,11 @@
 import Image from 'next/image';
+import img2 from '../../public/assets/image_2.png';
+import img3 from '../../public/assets/image_3.png';
 
 export default function Services() {
   const services = [
-    { title: 'HomeCare', photo: '/assets/image_2.png', photoLabel: 'Caregiver with mother and newborn at home', desc: 'Premium care provided in the comfort of the home for expectant mothers, new mothers, newborns and young families. We partner with families to develop bespoke care plans that prioritise comfort, safety and wellbeing.' },
-    { title: 'Corporate Care', photo: '/assets/image_3.png', photoLabel: 'Caregivers minding a group of children at an event', desc: 'Premium care for settings with a number of newborns, infants and children, for families, companies or organisations: retreats, birthdays, seminars, workshops, conferences, prayer meetings, vacations and playdates.' }
+    { title: 'HomeCare', photo: img2, photoLabel: 'Caregiver with mother and newborn at home', desc: 'Premium care provided in the comfort of the home for expectant mothers, new mothers, newborns and young families. We partner with families to develop bespoke care plans that prioritise comfort, safety and wellbeing.' },
+    { title: 'Corporate Care', photo: img3, photoLabel: 'Caregivers minding a group of children at an event', desc: 'Premium care for settings with a number of newborns, infants and children, for families, companies or organisations: retreats, birthdays, seminars, workshops, conferences, prayer meetings, vacations and playdates.' }
   ];
 
   const rates = [

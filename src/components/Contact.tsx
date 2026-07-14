@@ -1,6 +1,8 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
+import qrImg from '../../public/assets/QR Code.png';
+import logoImg from '../../public/assets/JoyfulHome Logo Smile.png';
 
 export default function Contact() {
   const [showQR, setShowQR] = useState(false);
@@ -97,7 +99,7 @@ export default function Contact() {
                 </div>
                 
                 <div className="relative w-full aspect-square mx-auto max-w-[240px]">
-                  <Image src="/assets/QR Code.png" alt="WhatsApp QR code" fill className="object-contain" />
+                  <Image src={qrImg} alt="WhatsApp QR code" fill className="object-contain" />
                 </div>
               </div>
             </div>
