@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#EFF2F1]">
       
-      {/* Background image — anchored to the right half so it never overlaps text */}
-      <div className="absolute top-0 right-0 bottom-0 w-full md:w-[58%] z-0">
+      {/* Full-width background image — gradient overlay handles the fade, not the container */}
+      <div className="absolute inset-0 z-0">
         <Image 
           src={heroImg} 
           alt="Mother cradling her newborn at home" 
