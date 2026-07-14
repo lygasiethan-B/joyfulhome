@@ -22,7 +22,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
-          background: 'linear-gradient(to right, rgba(239,242,241,0.995) 0%, rgba(239,242,241,0.01) 100%)'
+          background: 'linear-gradient(to right, rgba(239,242,241,1.0) 0%, rgba(239,242,241,0.01) 100%)'
         }}
       ></div>
 
