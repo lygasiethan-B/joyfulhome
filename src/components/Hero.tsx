@@ -12,7 +12,7 @@ export default function Hero() {
           src={heroImg} 
           alt="Mother cradling her newborn at home" 
           fill
-          className="object-cover object-[65%_center] md:object-[105%_center]"
+          className="object-cover object-[45%_center] md:object-[105%_center]"
           priority
         />
         
