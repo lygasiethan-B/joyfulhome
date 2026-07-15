@@ -18,7 +18,7 @@ export default function ComingSoon() {
             alt="Joyful Home Logo" 
             width={400} 
             height={133}
-            className="drop-shadow-sm h-auto w-auto max-h-28 object-contain"
+            className="drop-shadow-sm w-48 md:w-72 object-contain"
             priority
           />
         </div>
@@ -40,7 +40,7 @@ export default function ComingSoon() {
         </div>
 
         {/* Contact/Action */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <a 
             href="https://wa.me/256700143143"
             target="_blank"
@@ -53,11 +53,11 @@ export default function ComingSoon() {
             WhatsApp Us
           </a>
         </div>
-      </div>
-      
-      {/* Footer */}
-      <div className="absolute bottom-6 w-full text-center text-sm text-[#1F2A2E]/60 z-10">
-        &copy; {new Date().getFullYear()} Joyful Home. All rights reserved.
+        
+        {/* Footer inside the card */}
+        <div className="w-full text-center text-sm text-[#1F2A2E]/50 pt-4 border-t border-[#14B8AA]/10">
+          &copy; {new Date().getFullYear()} Joyful Home. All rights reserved.
+        </div>
       </div>
     </div>
   );
