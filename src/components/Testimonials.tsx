@@ -1,3 +1,6 @@
+'use client';
+import { useState, useEffect } from 'react';
+
 export default function Testimonials() {
   const testimonials = [
     { quote: 'Great service!', author: 'Client Family' },
@@ -22,20 +25,47 @@ export default function Testimonials() {
     { quote: 'I want to take this opportunity to extend my appreciation for the support rendered to us when our child was brought home. Your care made the journey smooth and we are really grateful for your services. Thank you 🙏', author: 'Client Family' }
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [testimonials.length]);
+
   return (
     <section id="testimonials" className="py-[96px] bg-white">
       <div className="max-w-[1120px] mx-auto px-6 mb-12 text-center">
-        <div className="font-passionate text-[30px] text-secondary mb-1">Real families, real joy</div>
-        <h2 className="font-mali font-bold text-[clamp(28px,4vw,42px)] text-primary">Testimonials</h2>
+        <div className="font-passionate text-[34px] text-secondary mb-1">The JoyfulHome Experience</div>
+        <h2 className="font-mali font-medium text-[clamp(28px,4vw,42px)] text-primary">Reviews</h2>
+        <p className="mt-3 text-primary/80 font-sans tracking-widest text-[11px] md:text-[13px] uppercase font-bold">Professional Excellence. Compassionate Care. Confident Beginnings.</p>
       </div>
-      <div className="flex gap-5 overflow-x-auto px-6 pb-6 snap-x snap-mandatory">
-        {testimonials.map((t, idx) => (
-          <div key={idx} className="flex-none snap-start w-[min(340px,80vw)] bg-neutral rounded-[20px] p-6.5 flex flex-col gap-3.5">
-            <div className="text-secondary text-lg tracking-widest">★★★★★</div>
-            <p className="text-[15px] leading-[1.6] text-text-dark m-0 flex-1">“{t.quote}”</p>
-            <div className="font-mali font-bold text-sm text-primary">{t.author}</div>
+      
+      <div className="max-w-[800px] mx-auto px-6 relative">
+        <div className="bg-neutral rounded-[32px] p-10 md:p-14 flex flex-col items-center text-center gap-6 shadow-sm min-h-[300px] justify-center transition-opacity duration-500">
+          <div className="text-secondary text-2xl tracking-widest">★★★★★</div>
+          <p className="text-[18px] md:text-[22px] leading-[1.6] text-text-dark/90 font-mali italic">
+            “{testimonials[currentIndex].quote}”
+          </p>
+          <div className="font-mali font-bold text-base text-primary uppercase tracking-wide">
+            — {testimonials[currentIndex].author}
           </div>
-        ))}
+        </div>
+
+        {/* Navigation Dots */}
+        <div className="flex justify-center gap-2 mt-8">
+          {testimonials.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentIndex(idx)}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                currentIndex === idx ? 'bg-secondary w-8' : 'bg-primary/20 hover:bg-primary/40'
+              }`}
+              aria-label={`Go to review ${idx + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

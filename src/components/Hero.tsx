@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import heroImg from '../../public/assets/image_1.jpg';
+import heroImg from '../../public/assets/JoyfulHome_scene_with_logo.svg';
 
 export default function Hero() {
   return (
@@ -25,17 +25,19 @@ export default function Hero() {
       <div className="relative z-20 max-w-[1240px] mx-auto w-full px-6 pt-[120px] pb-[80px] md:pt-[72px] md:pb-[96px] flex">
         {/* Content Container */}
         <div className="w-full md:w-1/2 md:pr-12 animate-fadeUp">
-          <div className="font-passionate text-[32px] text-white/90 mb-3">Your trusted premium care partner</div>
-          <h1 className="font-mali font-bold text-[clamp(28px,3.8vw,46px)] leading-[1.25] text-white mb-9 max-w-[24ch]">
-            At JoyfulHome, we care for every family with professional excellence, compassionate hearts, and a commitment to nurturing the whole person.
+          <div className="font-passionate text-[32px] text-white/90 mb-3">Your Trusted Premium Care Partner</div>
+          <h1 className="font-mali font-bold text-[clamp(28px,3vw,42px)] leading-[1.25] text-white mb-9 max-w-[32ch]">
+            JoyfulHome partners with families for confident, healthier beginnings through premium, personalised in-home nursing care experience that nurtures mothers, babies, and families; physically, emotionally, and spiritually.
           </h1>
           <div className="flex gap-3.5 flex-wrap mb-9">
-            <Link 
-              href="#contact" 
-              className="bg-[#00D084] text-white font-sans font-bold text-base px-7.5 py-3.5 rounded-full hover:bg-[#00b371] transition-colors shadow-lg"
+            <a 
+              href="https://forms.gle/Qu3ajZfwPAPoJxCP8" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#00D084] text-white font-sans font-bold text-base px-7.5 py-3.5 rounded-full hover:bg-[#00b371] transition-colors shadow-lg inline-block"
             >
               Get in Touch
-            </Link>
+            </a>
             <a 
               href="https://wa.me/256700143143" 
               target="_blank" 
@@ -46,7 +48,7 @@ export default function Hero() {
             </a>
           </div>
           <div className="flex gap-2.5 flex-wrap">
-            {['About', 'Services', 'Testimonials', 'FAQ', 'Contact'].map(label => (
+            {['About', 'Services', 'Reviews', 'FAQ', 'Contact'].map(label => (
               <Link 
                 key={label}
                 href={`#${label.toLowerCase()}`}

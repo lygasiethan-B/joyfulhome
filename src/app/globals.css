@@ -20,6 +20,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Offset scroll targets so content clears the sticky header (~72px) with a little breathing room */
+  scroll-padding-top: 88px;
 }
 
 body {
@@ -33,6 +35,31 @@ body {
   color: #fff;
 }
 
+/* ─── Section entrance animation ─────────────────────────────────────────── */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-animate {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Floating blobs ──────────────────────────────────────────────────────── */
 @keyframes jhFloat {
   0% { transform: translate(0, 0) rotate(0deg); }
   50% { transform: translate(14px, -18px) rotate(6deg); }
@@ -58,7 +85,11 @@ body {
     scroll-behavior: auto;
   }
   .animate-jhFloat,
-  .animate-jhFloatSlow {
+  .animate-jhFloatSlow,
+  .section-animate {
     animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
