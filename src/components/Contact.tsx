@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import qrImg from '../../public/assets/whatsapp_qr.svg';
+import qrImg from '../../public/assets/QR Code.svg';
 
 export default function Contact() {
 
