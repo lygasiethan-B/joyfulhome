@@ -33,7 +33,7 @@ export default function About() {
           <div>
             <h3 className="font-mali font-medium text-2xl text-primary mb-3.5">Our Why</h3>
             <p className="text-base leading-[1.7] text-text-dark mb-4">
-              Every family is different; We listen first, understand your needs, and develop a bespoke care plan that supports your family's lifestyle, preferences, and needs. At JoyfulHome, we are honoured to walk alongside families every step of the way, empowering families to thrive.
+              Every family is different; We listen first, understand your needs, and develop a bespoke care plan that supports your family&apos;s lifestyle, preferences, and needs. At JoyfulHome, we are honoured to walk alongside families every step of the way, empowering families to thrive.
             </p>
             <p className="text-base leading-[1.7] text-text-dark mb-4">
               Success for us is measured not only by the care we provide today, but by the confidence families carry into tomorrow. Our commitment is not only to care for mothers and babies but to strengthen families, one home at a time.

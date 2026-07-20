@@ -1,8 +1,6 @@
 'use client';
-import { useState } from 'react';
 import Image from 'next/image';
-import qrImg from '../../public/assets/QR Code.svg';
-import logoImg from '../../public/assets/JoyfulHome Logo Smile.png';
+import qrImg from '../../public/assets/whatsapp_qr.svg';
 
 export default function Contact() {
 

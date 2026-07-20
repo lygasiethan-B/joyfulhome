@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import logoImg from '../../public/assets/JoyfulHome Logo Smile.png';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
@@ -20,7 +20,6 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const activeId = useScrollSpy(SECTION_IDS);
   const router = useRouter();
-  const pathname = usePathname();
 
   /** Smooth-scroll to a section ID, accounting for the sticky header height */
   const handleNavClick = (

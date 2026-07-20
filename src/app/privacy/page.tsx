@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
         <div className="space-y-6 text-[15px]">
           <p><strong>Effective Date:</strong> {new Date().toLocaleDateString()}</p>
           
-          <p>Joyful Home ("we," "us," or "our") operates in Kampala, Uganda. We respect your privacy and are committed to protecting your personal data in accordance with globally recognized standards, including the GDPR.</p>
+          <p>Joyful Home (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates in Kampala, Uganda. We respect your privacy and are committed to protecting your personal data in accordance with globally recognized standards, including the GDPR.</p>
           
           <h2 className="text-xl font-bold text-primary mt-8 mb-4">1. Information We Collect</h2>
           <p>We may collect and process the following data about you:</p>
