@@ -1,4 +1,4 @@
-import Home from '../page_original';
+import Home from '../page';
 
 export default function PreviewPage() {
   return <Home />;
