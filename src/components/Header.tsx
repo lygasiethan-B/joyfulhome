@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import logoImg from '../../public/assets/JoyfulHome Logo Smile.png';
+import logoImg from '../../public/assets/joyfulhome-logo-smile.png';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
 const SECTION_IDS = ['hero', 'about', 'services', 'testimonials', 'faq', 'contact'];

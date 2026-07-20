@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import img2 from '../../public/assets/flat vector 2 joyfulhome staff taking care of children.svg';
-import img3 from '../../public/assets/flat vector 3 care taker feeding.svg';
+import img2 from '../../public/assets/services-img-2.svg';
+import img3 from '../../public/assets/services-img-3.svg';
 import premiumGiftBox from '../../public/assets/premium_gift_box.jpg';
 
 export default function Services() {

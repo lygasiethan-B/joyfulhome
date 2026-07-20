@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import logoSmile from '../../public/assets/JoyfulHome Logo Smile.png';
+import logoSmile from '../../public/assets/joyfulhome-logo-smile.png';
 
 const ValueCard = ({ title, desc }: { title: string, desc: string }) => (
   <div className="bg-[#F8FAFC]/80 backdrop-blur-sm border border-primary/10 rounded-[40px] p-7 px-8 text-center shadow-sm hover:shadow-lg transition-all duration-500 w-full max-w-[260px] hover:bg-white hover:border-primary/30 flex flex-col items-center justify-center relative z-20 group hover:-translate-y-1">

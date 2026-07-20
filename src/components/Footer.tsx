@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import logoLandscape from '../../public/assets/inverted logo joyfulhome landscape.png';
+import logoLandscape from '../../public/assets/inverted-logo-joyfulhome-landscape.png';
 
 export default function Footer() {
   return (

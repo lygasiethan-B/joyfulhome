@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import qrImg from '../../public/assets/QR Code.svg';
+import qrImg from '../../public/assets/qr-code.svg';
 
 export default function Contact() {
 
