@@ -27,7 +27,7 @@ export default function FAQ() {
         <div className="text-center mb-12">
           <div className="font-passionate text-[34px] text-secondary mb-1">FAQs</div>
           <h2 className="font-mali font-medium text-[clamp(28px,4vw,42px)] text-primary">So I Was Wondering</h2>
-          <p className="mt-3 text-primary/80 font-sans tracking-widest text-[11px] md:text-[13px] uppercase font-bold">Professional Excellence. Compassionate Care. Confident Beginnings.</p>
+          <p className="mt-3 text-primary/80 font-sans font-light text-[12px] md:text-[13.5px]">Professional Excellence. Compassionate Care. Confident Beginnings.</p>
         </div>
         <div className="flex flex-col gap-3.5">
           {faqs.map((faq, i) => (

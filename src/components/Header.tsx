@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 import logoImg from '../../public/assets/JoyfulHome Logo Smile.png';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
@@ -18,6 +19,8 @@ const navLinks = [
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const activeId = useScrollSpy(SECTION_IDS);
+  const router = useRouter();
+  const pathname = usePathname();
 
   /** Smooth-scroll to a section ID, accounting for the sticky header height */
   const handleNavClick = (
@@ -28,8 +31,12 @@ export default function Header() {
     setIsMobileMenuOpen(false);
     const id = href.replace('#', '');
     const target = document.getElementById(id);
+    
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // If we are on a different page (e.g. privacy policy), navigate back to the home page
+      router.push(`/preview${href}`);
     }
   };
 
@@ -46,8 +53,8 @@ export default function Header() {
             src={logoImg}
             alt="JoyfulHome"
             width={172}
-            height={64}
-            className="h-[56px] md:h-[64px] w-auto object-contain"
+            height={80}
+            className="h-[56px] md:h-[80px] w-auto object-contain"
           />
         </a>
 

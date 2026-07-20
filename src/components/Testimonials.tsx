@@ -39,7 +39,7 @@ export default function Testimonials() {
       <div className="max-w-[1120px] mx-auto px-6 mb-12 text-center">
         <div className="font-passionate text-[34px] text-secondary mb-1">The JoyfulHome Experience</div>
         <h2 className="font-mali font-medium text-[clamp(28px,4vw,42px)] text-primary">Reviews</h2>
-        <p className="mt-3 text-primary/80 font-sans tracking-widest text-[11px] md:text-[13px] uppercase font-bold">Professional Excellence. Compassionate Care. Confident Beginnings.</p>
+        <p className="mt-3 text-primary/80 font-sans font-light text-[12px] md:text-[13.5px]">Professional Excellence. Compassionate Care. Confident Beginnings.</p>
       </div>
       
       <div className="max-w-[800px] mx-auto px-6 relative">
@@ -48,9 +48,6 @@ export default function Testimonials() {
           <p className="text-[18px] md:text-[22px] leading-[1.6] text-text-dark/90 font-mali italic">
             “{testimonials[currentIndex].quote}”
           </p>
-          <div className="font-mali font-bold text-base text-primary uppercase tracking-wide">
-            — {testimonials[currentIndex].author}
-          </div>
         </div>
 
         {/* Navigation Dots */}

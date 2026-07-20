@@ -26,8 +26,8 @@ export default function Hero() {
         {/* Content Container */}
         <div className="w-full md:w-1/2 md:pr-12 animate-fadeUp">
           <div className="font-passionate text-[32px] text-white/90 mb-3">Your Trusted Premium Care Partner</div>
-          <h1 className="font-mali font-bold text-[clamp(28px,3vw,42px)] leading-[1.25] text-white mb-9 max-w-[32ch]">
-            JoyfulHome partners with families for confident, healthier beginnings through premium, personalised in-home nursing care experience that nurtures mothers, babies, and families; physically, emotionally, and spiritually.
+          <h1 className="font-mali font-medium text-[clamp(28px,3vw,42px)] leading-[1.25] text-white mb-9 max-w-[32ch]">
+            We partner with families for confident, healthier beginnings through premium, personalised in-home nursing care nurturing mothers and babies.
           </h1>
           <div className="flex gap-3.5 flex-wrap mb-9">
             <a 
