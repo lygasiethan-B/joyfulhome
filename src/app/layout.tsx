@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       "Premium in-home nursing and newborn care helping mothers, babies, and families begin parenthood with confidence.",
     images: [
       {
-        url: "https://joyfulhome.ug/assets/og-image.png",
+        url: "https://joyfulhome.ug/assets/og-secure-booking.png",
         width: 1200,
         height: 630,
         type: "image/png",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "Helping Families Begin with Confidence | JoyfulHome",
     description:
       "Premium in-home nursing and newborn care helping mothers, babies, and families begin parenthood with confidence.",
-    images: ["https://joyfulhome.ug/assets/og-image.png"],
+    images: ["https://joyfulhome.ug/assets/og-secure-booking.png"],
   },
 };
 
@@ -61,7 +61,7 @@ const jsonLdData = [
     "alternateName": ["Joyful Home", "Joyful Home Uganda"],
     "url": "https://joyfulhome.ug",
     "logo": "https://joyfulhome.ug/assets/joyfulhome-logo-smile.png",
-    "image": "https://joyfulhome.ug/assets/og-image.png",
+    "image": "https://joyfulhome.ug/assets/og-secure-booking.png",
     "email": "joyfulhome718@gmail.com",
     "telephone": "+256700143143",
     "description": "JoyfulHome provides professional, compassionate in-home nursing and early parenthood support for mothers, newborns, and families across Uganda.",
