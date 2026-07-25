@@ -21,7 +21,7 @@ export default function Header() {
   const activeId = useScrollSpy(SECTION_IDS);
   const router = useRouter();
 
-  /** Smooth-scroll to a section ID, accounting for the sticky header height */
+  /** Smooth-scroll to a section ID and update URL hash in address bar */
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
@@ -32,6 +32,7 @@ export default function Header() {
     const target = document.getElementById(id);
     
     if (target) {
+      window.history.pushState(null, '', href);
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
       // If we are on a different page (e.g. privacy policy), navigate back to the home page
