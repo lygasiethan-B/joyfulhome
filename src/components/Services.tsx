@@ -16,8 +16,11 @@ export default function Services() {
 
   return (
     <section id="services" className="relative py-[96px] px-6 bg-neutral overflow-hidden">
-      <div className="absolute -top-[40px] -right-[120px] w-[360px] h-[360px] bg-secondary opacity-15 rounded-[55%_45%_60%_40%/45%_55%_40%_60%] animate-jhFloatSlow z-0"></div>
-      <div className="absolute -bottom-[100px] -left-[100px] w-[300px] h-[300px] bg-accent-warm opacity-30 rounded-[60%_40%_50%_50%/40%_60%_40%_60%] animate-jhFloat z-0"></div>
+      {/* Decorative top-right teal shape (scaled & positioned responsively for mobile screens) */}
+      <div className="pointer-events-none absolute -top-[60px] -right-[100px] w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] md:w-[360px] md:h-[360px] md:-top-[40px] md:-right-[120px] bg-secondary opacity-15 rounded-[55%_45%_60%_40%/45%_55%_40%_60%] animate-jhFloatSlow z-0"></div>
+
+      {/* Decorative bottom-left warm accent shape */}
+      <div className="pointer-events-none absolute -bottom-[60px] -left-[80px] w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[300px] md:h-[300px] md:-bottom-[100px] md:-left-[100px] bg-accent-warm opacity-30 rounded-[60%_40%_50%_50%/40%_60%_40%_60%] animate-jhFloat z-0"></div>
 
       <div className="relative z-10 max-w-[1120px] mx-auto">
         <div className="text-center mb-14">

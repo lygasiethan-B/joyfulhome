@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <>
       <section id="contact" className="relative bg-[#186C78] pt-[100px] px-8 pb-[100px] text-white overflow-hidden">
-        <div className="absolute -top-[140px] -right-[160px] w-[500px] h-[500px] bg-[#14B8AA] opacity-15 rounded-full z-0"></div>
+        <div className="pointer-events-none absolute -top-[80px] -right-[100px] w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[500px] md:h-[500px] md:-top-[140px] md:-right-[160px] bg-[#14B8AA] opacity-15 rounded-full z-0"></div>
 
         <div className="relative z-10 max-w-[1160px] mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-16 items-center">
           <div>
