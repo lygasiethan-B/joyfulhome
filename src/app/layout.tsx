@@ -21,9 +21,35 @@ const passionate = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "JoyfulHome | Your Trusted Premium Care Partner",
+  metadataBase: new URL("https://joyfulhome.ug"),
+  title: "Helping Families Begin with Confidence | JoyfulHome",
   description:
-    "Professional in-home nursing and newborn care that supports mothers, babies and families through pregnancy, postpartum recovery and early parenthood.",
+    "Premium in-home nursing and newborn care helping mothers, babies, and families begin parenthood with confidence.",
+  openGraph: {
+    type: "website",
+    url: "https://joyfulhome.ug/",
+    siteName: "JoyfulHome",
+    locale: "en_UG",
+    title: "Helping Families Begin with Confidence | JoyfulHome",
+    description:
+      "Premium in-home nursing and newborn care helping mothers, babies, and families begin parenthood with confidence.",
+    images: [
+      {
+        url: "https://joyfulhome.ug/assets/og-image.png",
+        width: 1200,
+        height: 630,
+        type: "image/png",
+        alt: "JoyfulHome - Your Trusted Premium Care Partner",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Helping Families Begin with Confidence | JoyfulHome",
+    description:
+      "Premium in-home nursing and newborn care helping mothers, babies, and families begin parenthood with confidence.",
+    images: ["https://joyfulhome.ug/assets/og-image.png"],
+  },
 };
 
 export default function RootLayout({
