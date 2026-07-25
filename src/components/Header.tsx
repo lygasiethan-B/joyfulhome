@@ -35,7 +35,7 @@ export default function Header() {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
       // If we are on a different page (e.g. privacy policy), navigate back to the home page
-      router.push(`/preview${href}`);
+      router.push(`/${href}`);
     }
   };
 

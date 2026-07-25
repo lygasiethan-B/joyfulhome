@@ -24,8 +24,8 @@ export function useSectionAnimate() {
         });
       },
       {
-        threshold: 0.12, // trigger when 12% of the element is in view
-        rootMargin: '0px 0px -48px 0px', // slightly above bottom edge
+        threshold: 0.05, // trigger smoothly when 5% of the element enters viewport (ideal for mobile screens)
+        rootMargin: '0px 0px -20px 0px',
       }
     );
 

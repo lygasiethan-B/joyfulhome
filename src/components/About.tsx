@@ -4,7 +4,7 @@ import logoSmile from '../../public/assets/joyfulhome-logo-smile.png';
 
 const ValueCard = ({ title, desc }: { title: string, desc: string }) => (
   <div className="bg-[#F8FAFC]/80 backdrop-blur-sm border border-primary/10 rounded-[40px] p-7 px-8 text-center shadow-sm hover:shadow-lg transition-all duration-500 w-full max-w-[260px] hover:bg-white hover:border-primary/30 flex flex-col items-center justify-center relative z-20 group hover:-translate-y-1">
-    <h4 className="font-mali font-bold text-[17px] tracking-widest uppercase text-secondary mb-3 group-hover:text-primary transition-colors">{title}</h4>
+    <h4 className="font-mali font-bold text-[17px] tracking-widest text-secondary mb-3 group-hover:text-primary transition-colors">{title}</h4>
     <p className="text-[13px] leading-[1.6] text-text-dark/80">{desc}</p>
   </div>
 );
@@ -45,7 +45,7 @@ export default function About() {
         </div>
 
         <div className="text-center mt-24 mb-12">
-          <h3 className="font-mali font-bold text-[clamp(26px,4vw,36px)] text-primary uppercase tracking-wide">OUR VALUES</h3>
+          <h3 className="font-mali font-bold text-[clamp(26px,4vw,36px)] text-primary tracking-wide">Our Values</h3>
         </div>
 
         {/* Desktop Grid Layout (matches the sketch) */}
@@ -56,26 +56,26 @@ export default function About() {
 
           {/* Top Row */}
           <div className="col-start-2 z-10">
-            <ValueCard title="TRUTH" desc="We act with honesty, integrity and transparency in every interaction." />
+            <ValueCard title="Truth" desc="We act with honesty, integrity and transparency in every interaction." />
           </div>
           
           {/* Middle Row */}
           <div className="col-start-1 row-start-2 justify-self-end mr-[-40px] z-10">
-            <ValueCard title="TRANSFORMATION" desc="We pursue excellence that creates a positive and lasting impact for every family." />
+            <ValueCard title="Transformation" desc="We pursue excellence that creates a positive and lasting impact for every family." />
           </div>
           <div className="col-start-2 row-start-2 mx-8 z-10">
             <Image src={logoSmile} alt="JoyfulHome Logo" width={240} height={240} className="w-[220px] h-[220px] object-contain drop-shadow-xl animate-jhFloat" />
           </div>
           <div className="col-start-3 row-start-2 justify-self-start ml-[-40px] z-10">
-            <ValueCard title="TIMELINESS" desc="We respect every family’s time by being punctual, responsive and dependable." />
+            <ValueCard title="Timeliness" desc="We respect every family’s time by being punctual, responsive and dependable." />
           </div>
 
           {/* Bottom Row */}
           <div className="col-start-1 row-start-3 justify-self-end mr-[-20px] z-10">
-            <ValueCard title="TRUST" desc="We build confidence through reliability, professionalism and confidentiality." />
+            <ValueCard title="Trust" desc="We build confidence through reliability, professionalism and confidentiality." />
           </div>
           <div className="col-start-3 row-start-3 justify-self-start ml-[-20px] z-10">
-            <ValueCard title="THOUGHTFULNESS" desc="We anticipate needs before they are expressed, with empathy and attention to detail." />
+            <ValueCard title="Thoughtfulness" desc="We anticipate needs before they are expressed, with empathy and attention to detail." />
           </div>
         </div>
 
@@ -84,11 +84,11 @@ export default function About() {
           <div className="mb-6 z-10">
             <Image src={logoSmile} alt="JoyfulHome Logo" width={180} height={180} className="w-[160px] h-[160px] object-contain drop-shadow-xl" />
           </div>
-          <ValueCard title="TRUTH" desc="We act with honesty, integrity and transparency in every interaction." />
-          <ValueCard title="TRANSFORMATION" desc="We pursue excellence that creates a positive and lasting impact for every family." />
-          <ValueCard title="TIMELINESS" desc="We respect every family’s time by being punctual, responsive and dependable." />
-          <ValueCard title="TRUST" desc="We build confidence through reliability, professionalism and confidentiality." />
-          <ValueCard title="THOUGHTFULNESS" desc="We anticipate needs before they are expressed, with empathy and attention to detail." />
+          <ValueCard title="Truth" desc="We act with honesty, integrity and transparency in every interaction." />
+          <ValueCard title="Transformation" desc="We pursue excellence that creates a positive and lasting impact for every family." />
+          <ValueCard title="Timeliness" desc="We respect every family’s time by being punctual, responsive and dependable." />
+          <ValueCard title="Trust" desc="We build confidence through reliability, professionalism and confidentiality." />
+          <ValueCard title="Thoughtfulness" desc="We anticipate needs before they are expressed, with empathy and attention to detail." />
         </div>
       </div>
     </section>

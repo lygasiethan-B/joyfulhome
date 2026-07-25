@@ -71,7 +71,7 @@ export default function Services() {
             </div>
             <h3 className="font-mali font-medium text-[24px] mb-2 text-accent-warm">Gift Our Services</h3>
             <p className="text-[15.5px] leading-[1.6] max-w-[50ch] text-white/90">
-              Gift the peace of mind every mother-to-be deserves, one that truly makes a difference! Friends, family, and employers can sponsor premium care packages delivering essential professional, compassionate and holistic support during this life-changing transition.
+              The peace of mind every mother-to-be deserves, one that truly makes a difference! Friends, family, and employers can sponsor premium care packages delivering essential professional, compassionate and holistic support during this life-changing transition.
             </p>
           </div>
           <div className="relative z-10 shrink-0">

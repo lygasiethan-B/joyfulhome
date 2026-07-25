@@ -41,7 +41,7 @@ export default function Contact() {
 
           <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl py-12 px-8 flex flex-col items-center justify-center relative min-h-[300px]">
             <div className="flex flex-col items-center">
-              <div className="text-[12px] text-white/80 mb-3 font-sans uppercase tracking-widest font-bold">Or Scan to Chat</div>
+              <div className="text-[12px] text-white/80 mb-3 font-sans tracking-widest font-bold">Scan To Chat</div>
               <div className="bg-white rounded-xl shadow-lg w-[140px] h-[140px] relative flex items-center justify-center p-2">
                 <Image src={qrImg} alt="WhatsApp QR code" fill className="object-contain p-2" />
               </div>

@@ -10,28 +10,28 @@ export default function PrivacyPolicy() {
         <h1 className="font-mali text-4xl font-bold text-primary mb-8">Privacy Policy</h1>
         
         <div className="space-y-6 text-[15px]">
-          <p><strong>Effective Date:</strong> {new Date().toLocaleDateString()}</p>
+          <p><strong>Effective Date:</strong> 01/01/2026</p>
           
-          <p>Joyful Home (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates in Kampala, Uganda. We respect your privacy and are committed to protecting your personal data in accordance with globally recognized standards, including the GDPR.</p>
+          <p>At JoyfulHome, protecting your privacy is one of our highest priorities. We respect your privacy and are committed to protecting your personal data in accordance with globally recognized standards, including the GDPR.</p>
           
           <h2 className="text-xl font-bold text-primary mt-8 mb-4">1. Information We Collect</h2>
           <p>We may collect and process the following data about you:</p>
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Identity Data:</strong> Name, age, and family status.</li>
-            <li><strong>Contact Data:</strong> Email address, physical address (for homecare services), and telephone/WhatsApp number.</li>
-            <li><strong>Health & Care Data:</strong> Information relevant to newborn care, maternal care, or specific caregiving needs provided during the Client Needs Assessment.</li>
+            <li><strong>Identity Data:</strong> Name, age and family status.</li>
+            <li><strong>Contact Data:</strong> Email address, physical address, telephone/WhatsApp number, emergency contacts and National ID or Passport Number (where required).</li>
+            <li><strong>Health & Care Data:</strong> Information relevant to newborn care, maternal care, or specific caregiving needs provided during the Client Needs Assessment. Information relating to newborns and infants is collected only through parents or legal guardians and solely for the provision of services.</li>
           </ul>
 
           <h2 className="text-xl font-bold text-primary mt-8 mb-4">2. How We Use Your Data</h2>
           <p>We only use your personal data for the following purposes:</p>
           <ul className="list-disc pl-5 space-y-2">
-            <li>To provide and manage our homecare and corporate care services.</li>
+            <li>To provide and manage our services whilst meeting the legal and regulatory obligations.</li>
             <li>To communicate with you regarding bookings, inquiries, and care plans.</li>
-            <li>To ensure the safety, well-being, and customized care of your family.</li>
+            <li>To ensure the safety, well-being, and bespoke care of your family.</li>
           </ul>
 
           <h2 className="text-xl font-bold text-primary mt-8 mb-4">3. Data Security & Retention</h2>
-          <p>We implement strict security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way. We only retain your data for as long as necessary to fulfill the purposes we collected it for, including any legal or accounting requirements.</p>
+          <p>We implement strict security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way. We only retain your data for as long as necessary to fulfill the purposes we collected it for, including any legal, regulatory or accounting requirements.</p>
 
           <h2 className="text-xl font-bold text-primary mt-8 mb-4">4. Your Rights</h2>
           <p>Under global data protection standards (GDPR), you have the right to:</p>
@@ -42,9 +42,8 @@ export default function PrivacyPolicy() {
           </ul>
 
           <h2 className="text-xl font-bold text-primary mt-8 mb-4">5. Contact Us</h2>
-          <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at:</p>
-          <p className="mt-2"><strong>Location:</strong> Kampala, Uganda</p>
-          <p><strong>Email:</strong> joyfulhome718@gmail.com</p>
+          <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us:</p>
+          <p className="mt-2"><strong>Email:</strong> joyfulhome718@gmail.com</p>
           <p><strong>Phone:</strong> +256 700 143 143</p>
         </div>
       </div>
