@@ -37,7 +37,7 @@ export default function TermsConditions() {
           <h2 className="text-xl font-bold text-primary mt-8 mb-4">6. Property</h2>
           <p>All website and other content, whether tangible or intangible, including but not limited to logos, branding, images, educational material, documents and, any materials of any kind that contain or embody any proprietary or information of JoyfulHome belongs to the Company unless otherwise stated.</p>
           <p>No reproduction is permitted without written consent.</p>
-          <p>Where clients voluntarily submit testimonials, reviews, photographs, or videos, they grant the JoyfulHome permission to use such content for marketing purposes, subject to any limitations agreed in writing. Clients may request anonymity, and the Company will make reasonable efforts to honour such requests.</p>
+          <p>Where clients voluntarily submit testimonials, reviews, photographs, or videos, they grant JoyfulHome permission to use such content for marketing purposes, subject to any limitations agreed in writing. Clients may request anonymity, and the Company will make reasonable efforts to honour such requests.</p>
 
           <h2 className="text-xl font-bold text-primary mt-8 mb-4">7. Contact Us</h2>
           <p>For any questions regarding these Terms and Conditions, please contact us:</p>
