@@ -48,14 +48,20 @@ export default function Hero() {
             </a>
           </div>
           <div className="flex gap-2.5 flex-wrap">
-            {['About', 'Services', 'Reviews', 'FAQ', 'Contact'].map(label => (
-              <Link 
-                key={label}
-                href={`#${label.toLowerCase()}`}
+            {[
+              { label: 'About', href: '#about' },
+              { label: 'Services', href: '#services' },
+              { label: 'Reviews', href: '#testimonials' },
+              { label: 'FAQ', href: '#faq' },
+              { label: 'Contact', href: '#contact' },
+            ].map((link) => (
+              <a 
+                key={link.label}
+                href={link.href}
                 className="font-sans font-semibold text-[13px] text-white bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-colors"
               >
-                → {label}
-              </Link>
+                → {link.label}
+              </a>
             ))}
           </div>
         </div>
