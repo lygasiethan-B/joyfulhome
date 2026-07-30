@@ -4,7 +4,7 @@ import logoSmile from '../../public/assets/joyfulhome-logo-smile.png';
 
 const ValueCard = ({ title, desc }: { title: string, desc: string }) => (
   <div className="bg-[#F8FAFC]/80 backdrop-blur-sm border border-primary/10 rounded-[40px] p-7 px-8 text-center shadow-sm hover:shadow-lg transition-all duration-500 w-full max-w-[260px] hover:bg-white hover:border-primary/30 flex flex-col items-center justify-center relative z-20 group hover:-translate-y-1">
-    <h4 className="font-mali font-bold text-[17px] tracking-widest text-secondary mb-3 group-hover:text-primary transition-colors">{title}</h4>
+    <h4 className="font-mali font-medium text-[17px] tracking-widest text-secondary mb-3 group-hover:text-primary transition-colors">{title}</h4>
     <p className="text-[13px] leading-[1.6] text-text-dark/80">{desc}</p>
   </div>
 );
@@ -45,7 +45,7 @@ export default function About() {
         </div>
 
         <div className="text-center mt-24 mb-12">
-          <h3 className="font-mali font-bold text-[clamp(26px,4vw,36px)] text-primary tracking-wide">Our Values</h3>
+          <h3 className="font-mali font-medium text-[clamp(26px,4vw,36px)] text-primary tracking-wide">Our Values</h3>
         </div>
 
         {/* Desktop Grid Layout (matches the sketch) */}
