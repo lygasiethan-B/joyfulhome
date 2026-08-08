@@ -17,6 +17,7 @@ export default function Contact() {
             </h2>
 
             <p className="text-[16px] leading-[1.65] text-[#E7ECE9]/90 mb-10 max-w-[46ch] font-light">
+              We are honoured to walk alongside you.<br />
               Send us a message and our team will respond.
             </p>
             <div className="flex flex-wrap gap-4 mt-6">

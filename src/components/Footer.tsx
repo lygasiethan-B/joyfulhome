@@ -17,7 +17,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-[13px] font-sans font-light opacity-80 leading-relaxed max-w-[280px]">
-              Professional Excellence. Compassionate Care. Confident Beginnings.
+              Professional Excellence. Compassionate Care. <span className="whitespace-nowrap">Confident Beginnings.</span>
             </p>
           </div>
 
