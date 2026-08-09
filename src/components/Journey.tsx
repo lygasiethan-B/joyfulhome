@@ -11,10 +11,10 @@ const touchpoints = [
 ];
 
 const smallDots = [
-  { id: 1, x: 200, y: 200, img: bareFootBlue, alt: 'Blue barefoot icon' },
-  { id: 2, x: 400, y: 200, img: bareFootBrown, alt: 'Brown barefoot icon' },
-  { id: 3, x: 600, y: 200, img: bareFootBlue, alt: 'Blue barefoot icon' },
-  { id: 4, x: 800, y: 200, img: bareFootBrown, alt: 'Brown barefoot icon' },
+  { id: 1, x: 200, y: 200, img: bareFootBlue, alt: 'Blue barefoot icon', direction: 'up' },
+  { id: 2, x: 400, y: 200, img: bareFootBrown, alt: 'Brown barefoot icon', direction: 'down' },
+  { id: 3, x: 600, y: 200, img: bareFootBlue, alt: 'Blue barefoot icon', direction: 'up' },
+  { id: 4, x: 800, y: 200, img: bareFootBrown, alt: 'Brown barefoot icon', direction: 'down' },
 ];
 
 export default function Journey() {
@@ -40,18 +40,31 @@ export default function Journey() {
               .animate-flow {
                 animation: flowDash 1.5s linear infinite;
               }
-              @keyframes footStepPulse {
+              @keyframes footStepPulseUp {
                 0%, 100% {
                   transform: rotate(45deg) scale(1);
                   opacity: 0.85;
                 }
                 50% {
-                  transform: rotate(45deg) scale(1.18) translateY(-2px);
+                  transform: rotate(45deg) scale(1.18);
                   opacity: 1;
                 }
               }
-              .animate-foot-step {
-                animation: footStepPulse 3s ease-in-out infinite;
+              @keyframes footStepPulseDown {
+                0%, 100% {
+                  transform: rotate(135deg) scale(1);
+                  opacity: 0.85;
+                }
+                50% {
+                  transform: rotate(135deg) scale(1.18);
+                  opacity: 1;
+                }
+              }
+              .animate-foot-step-up {
+                animation: footStepPulseUp 3s ease-in-out infinite;
+              }
+              .animate-foot-step-down {
+                animation: footStepPulseDown 3s ease-in-out infinite;
               }
             `}</style>
 
@@ -81,11 +94,13 @@ export default function Journey() {
               ))}
             </svg>
 
-            {/* Barefoot Icons with 45-degree rotation & minimalist animation */}
+            {/* Barefoot Icons with directional path rotation & minimalist animation */}
             {smallDots.map((dot) => (
               <div 
                 key={`sdot-${dot.id}`}
-                className="absolute w-7 h-7 -ml-[14px] -mt-[14px] flex items-center justify-center pointer-events-none animate-foot-step"
+                className={`absolute w-7 h-7 -ml-[14px] -mt-[14px] flex items-center justify-center pointer-events-none ${
+                  dot.direction === 'up' ? 'animate-foot-step-up' : 'animate-foot-step-down'
+                }`}
                 style={{ 
                   left: dot.x, 
                   top: dot.y,
