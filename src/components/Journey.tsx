@@ -28,8 +28,8 @@ export default function Journey() {
           <p className="mt-3 text-primary/80 font-sans font-light text-[12px] md:text-[13.5px]">Professional Excellence. Compassionate Care. Confident Beginnings.</p>
         </div>
 
-        {/* Graphic Container */}
-        <div className="w-full bg-[#FAF7F5] rounded-[40px] p-8 md:p-12 overflow-x-auto overflow-y-hidden shadow-sm border border-primary/5">
+        {/* Desktop Graphic Container */}
+        <div className="hidden md:block w-full bg-[#FAF7F5] rounded-[40px] p-8 md:p-12 overflow-x-auto overflow-y-hidden shadow-sm border border-primary/5">
           <div className="min-w-[1000px] h-[400px] relative mx-auto font-sans">
             
             <style>{`
@@ -143,6 +143,45 @@ export default function Journey() {
               </div>
             ))}
             
+          </div>
+        </div>
+
+        {/* Mobile Top-to-Bottom Vertical Timeline Container */}
+        <div className="block md:hidden w-full bg-[#FAF7F5] rounded-[32px] p-6 sm:p-8 shadow-sm border border-primary/5 font-sans">
+          <div className="flex flex-col gap-6 relative px-1">
+            {touchpoints.map((tp, index) => {
+              const footIcon = index % 2 === 0 ? bareFootBlue : bareFootBrown;
+              const isLast = index === touchpoints.length - 1;
+              return (
+                <div key={`m-tp-${tp.id}`} className="relative flex items-center gap-4 py-2">
+                  {/* Step Number Circle */}
+                  <div className="w-9 h-9 shrink-0 flex items-center justify-center rounded-full bg-primary text-white font-mali font-bold text-[15px] shadow-md border-[3px] border-[#FAF7F5] z-10">
+                    {index + 1}
+                  </div>
+
+                  {/* Step Title */}
+                  <div className="font-mali font-semibold text-[16px] text-primary leading-[1.35]">
+                    {tp.title}
+                  </div>
+
+                  {/* Vertical Dotted Line & Footprint between steps */}
+                  {!isLast && (
+                    <div className="absolute left-[17px] top-[40px] bottom-[-24px] flex flex-col items-center justify-center z-0 pointer-events-none">
+                      <div className="w-[1.5px] h-full bg-[#2B5A5F]/40 border-l border-dashed border-[#2B5A5F]"></div>
+                      <div className="absolute top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center">
+                        <Image 
+                          src={footIcon} 
+                          alt="Footprint icon" 
+                          width={24} 
+                          height={24} 
+                          className="w-full h-full object-contain rotate-90 animate-pulse opacity-90" 
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

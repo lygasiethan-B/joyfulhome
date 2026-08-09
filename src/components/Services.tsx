@@ -43,9 +43,11 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="bg-white rounded-3xl p-8 mb-14 overflow-x-auto">
+        <div className="bg-white rounded-3xl p-6 md:p-8 mb-14">
           <h3 className="font-mali font-medium text-xl text-primary mb-4.5">Daily Rates (UGX)</h3>
-          <table className="w-full border-collapse min-w-[420px]">
+          
+          {/* Desktop Table */}
+          <table className="hidden md:table w-full border-collapse min-w-[420px]">
             <thead>
               <tr>
                 <th className="text-left py-3 px-2.5 font-sans font-bold text-[13px] tracking-wider uppercase text-primary border-b-2 border-neutral">Service</th>
@@ -61,6 +63,17 @@ export default function Services() {
               ))}
             </tbody>
           </table>
+
+          {/* Mobile Top-to-Bottom Layout */}
+          <div className="flex md:hidden flex-col gap-3">
+            {rates.map(rate => (
+              <div key={rate.service} className="flex flex-col sm:flex-row justify-between items-start sm:items-center py-3 border-b border-neutral/60 gap-1">
+                <span className="font-sans font-semibold text-[15px] text-text-dark">{rate.service}</span>
+                <span className="font-sans font-medium text-[15px] text-primary">{rate.range} UGX</span>
+              </div>
+            ))}
+          </div>
+
           <div className="text-xs text-primary mt-3.5 opacity-75">Terms &amp; Conditions Apply.</div>
         </div>
 
