@@ -1,4 +1,6 @@
-'use client';
+import Image from 'next/image';
+import bareFootBlue from '../../public/assets/bare_foot_blue.webp';
+import bareFootBrown from '../../public/assets/bare_foot_brown.webp';
 
 const touchpoints = [
   { id: 1, title: 'Contact Us', x: 100, y: 250, pos: 'bottom' },
@@ -9,10 +11,10 @@ const touchpoints = [
 ];
 
 const smallDots = [
-  { id: 1, x: 200, y: 200, color: 'bg-secondary' },
-  { id: 2, x: 400, y: 200, color: 'bg-accent-warm' },
-  { id: 3, x: 600, y: 200, color: 'bg-secondary' },
-  { id: 4, x: 800, y: 200, color: 'bg-accent-warm' },
+  { id: 1, x: 200, y: 200, img: bareFootBlue, alt: 'Blue barefoot icon' },
+  { id: 2, x: 400, y: 200, img: bareFootBrown, alt: 'Brown barefoot icon' },
+  { id: 3, x: 600, y: 200, img: bareFootBlue, alt: 'Blue barefoot icon' },
+  { id: 4, x: 800, y: 200, img: bareFootBrown, alt: 'Brown barefoot icon' },
 ];
 
 export default function Journey() {
@@ -66,13 +68,21 @@ export default function Journey() {
               ))}
             </svg>
 
-            {/* Small Decorative Dots */}
+            {/* Barefoot Icons replacing small dots */}
             {smallDots.map((dot) => (
               <div 
                 key={`sdot-${dot.id}`}
-                className={`absolute w-3 h-3 rounded-full -ml-1.5 -mt-1.5 shadow-sm ${dot.color}`}
+                className="absolute w-7 h-7 -ml-[14px] -mt-[14px] flex items-center justify-center pointer-events-none drop-shadow-sm"
                 style={{ left: dot.x, top: dot.y }}
-              />
+              >
+                <Image 
+                  src={dot.img} 
+                  alt={dot.alt} 
+                  width={28} 
+                  height={28} 
+                  className="w-full h-full object-contain"
+                />
+              </div>
             ))}
 
             {/* Main Touchpoint Dots with Numbers to guide the eye */}
