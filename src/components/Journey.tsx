@@ -40,6 +40,19 @@ export default function Journey() {
               .animate-flow {
                 animation: flowDash 1.5s linear infinite;
               }
+              @keyframes footStepPulse {
+                0%, 100% {
+                  transform: rotate(45deg) scale(1);
+                  opacity: 0.85;
+                }
+                50% {
+                  transform: rotate(45deg) scale(1.18) translateY(-2px);
+                  opacity: 1;
+                }
+              }
+              .animate-foot-step {
+                animation: footStepPulse 3s ease-in-out infinite;
+              }
             `}</style>
 
             {/* SVG Lines */}
@@ -68,12 +81,16 @@ export default function Journey() {
               ))}
             </svg>
 
-            {/* Barefoot Icons replacing small dots */}
+            {/* Barefoot Icons with 45-degree rotation & minimalist animation */}
             {smallDots.map((dot) => (
               <div 
                 key={`sdot-${dot.id}`}
-                className="absolute w-7 h-7 -ml-[14px] -mt-[14px] flex items-center justify-center pointer-events-none drop-shadow-sm"
-                style={{ left: dot.x, top: dot.y }}
+                className="absolute w-7 h-7 -ml-[14px] -mt-[14px] flex items-center justify-center pointer-events-none animate-foot-step"
+                style={{ 
+                  left: dot.x, 
+                  top: dot.y,
+                  animationDelay: `${dot.id * 0.45}s`
+                }}
               >
                 <Image 
                   src={dot.img} 
