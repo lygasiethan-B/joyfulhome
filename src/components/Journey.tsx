@@ -42,21 +42,21 @@ export default function Journey() {
               }
               @keyframes footStepPulseUp {
                 0%, 100% {
-                  transform: rotate(45deg) scale(1);
-                  opacity: 0.85;
+                  transform: rotate(55deg) scale(1);
+                  opacity: 0.9;
                 }
                 50% {
-                  transform: rotate(45deg) scale(1.18);
+                  transform: rotate(55deg) scale(1.15);
                   opacity: 1;
                 }
               }
               @keyframes footStepPulseDown {
                 0%, 100% {
-                  transform: rotate(135deg) scale(1);
-                  opacity: 0.85;
+                  transform: rotate(130deg) scale(1);
+                  opacity: 0.9;
                 }
                 50% {
-                  transform: rotate(135deg) scale(1.18);
+                  transform: rotate(130deg) scale(1.15);
                   opacity: 1;
                 }
               }
@@ -166,17 +166,18 @@ export default function Journey() {
 
                   {/* Vertical Dotted Line & Footprint between steps */}
                   {!isLast && (
-                    <div className="absolute left-[17px] top-[40px] bottom-[-24px] flex flex-col items-center justify-center z-0 pointer-events-none">
-                      <div className="w-[1.5px] h-full bg-[#2B5A5F]/40 border-l border-dashed border-[#2B5A5F]"></div>
-                      <div className="absolute top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center">
+                    <div className="absolute left-[17px] top-[38px] bottom-[-24px] flex flex-col items-center justify-between z-0 pointer-events-none">
+                      <div className="w-[1.5px] h-[calc(50%-14px)] bg-[#2B5A5F]/40 border-l border-dashed border-[#2B5A5F]"></div>
+                      <div className="w-7 h-7 bg-[#FAF7F5] rounded-full flex items-center justify-center z-10 border border-[#2B5A5F]/15 shadow-sm">
                         <Image 
                           src={footIcon} 
                           alt="Footprint icon" 
-                          width={24} 
-                          height={24} 
-                          className="w-full h-full object-contain rotate-90 animate-pulse opacity-90" 
+                          width={20} 
+                          height={20} 
+                          className="w-full h-full object-contain rotate-180 animate-pulse opacity-90" 
                         />
                       </div>
+                      <div className="w-[1.5px] h-[calc(50%-14px)] bg-[#2B5A5F]/40 border-l border-dashed border-[#2B5A5F]"></div>
                     </div>
                   )}
                 </div>
