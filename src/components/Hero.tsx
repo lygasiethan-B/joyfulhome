@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="relative z-20 max-w-[1240px] mx-auto w-full px-6 pt-[120px] pb-[80px] md:pt-[72px] md:pb-[96px] flex">
         {/* Content Container */}
         <div className="w-full md:w-1/2 md:pr-12 animate-fadeUp">
-          <div className="font-passionate text-[32px] text-white/90 mb-3">Your Trusted Premium Care Partner</div>
+          <div className="font-passionate text-[clamp(14px,1.6vw,22px)] text-white/90 mb-2">Your Trusted Premium Care Partner</div>
           <h1 className="font-mali font-medium text-[clamp(28px,3vw,42px)] leading-[1.25] text-white mb-9 max-w-[32ch]">
             We partner with families for confident, healthier beginnings through premium, personalised <span className="whitespace-nowrap">in-home nursing care</span> nurturing mothers and babies.
           </h1>

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import logoImg from '../../public/assets/joyfulhome-logo-smile.png';
+import navbarLogoIcon from '../../public/assets/navbar-logo-icon.png';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
 const SECTION_IDS = ['hero', 'about', 'services', 'testimonials', 'faq', 'contact'];
@@ -41,21 +41,24 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#E7ECE9]/90 backdrop-blur-md border-b border-primary/10">
-      <div className="max-w-[1240px] mx-auto px-6 py-3.5 flex items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-primary/10 shadow-sm">
+      <div className="max-w-[1240px] mx-auto px-6 py-2.5 flex items-center justify-between gap-4">
         {/* Logo — scroll back to top */}
         <a
           href="#hero"
           onClick={(e) => handleNavClick(e, '#hero')}
-          className="shrink-0"
+          className="shrink-0 flex items-center gap-2.5 group"
         >
-          <Image
-            src={logoImg}
-            alt="JoyfulHome"
-            width={172}
-            height={80}
-            className="h-[56px] md:h-[80px] w-auto object-contain"
-          />
+          <div className="flex items-center justify-center transition-transform group-hover:scale-105">
+            <Image
+              src={navbarLogoIcon}
+              alt="JoyfulHome Icon"
+              width={56}
+              height={56}
+              className="h-[46px] w-[46px] md:h-[56px] md:w-[56px] object-contain"
+              priority
+            />
+          </div>
         </a>
 
         {/* Desktop Navigation */}

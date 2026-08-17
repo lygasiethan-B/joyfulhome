@@ -5,7 +5,7 @@ import premiumGiftBox from '../../public/assets/premium_gift_box.jpg';
 
 export default function Services() {
   const services = [
-    { title: 'HomeCare', photo: img3, photoLabel: 'Caregiver with mother and newborn at home', desc: 'We partner with families to develop bespoke care plans that prioritise their comfort, safety, and well-being. Premium in-home nursing care that nurtures the physical, emotional and for families who desire it faith-informed encouragement through prayer, worship, and age-appropriate Bible stories.' },
+    { title: 'HomeCare', photo: img3, photoLabel: 'Caregiver with mother and newborn at home', desc: 'We partner with families to develop bespoke care plans that prioritise their comfort, safety, and well-being. Premium in-home nursing care that nurtures the physical, emotional and for families who desire faith-informed encouragement through prayer, worship, and age-appropriate Bible stories.' },
     { title: 'Corporate Care', photo: img2, photoLabel: 'Caregivers minding a group of children at an event', desc: 'We partner with families and event organisers to provide premium care for settings that include a number of newborns, infants and children for families, companies or organisations e.g retreats, events such as birthdays, seminars, thanksgivings, short or long trips, workshops, get togethers, getaways, conferences, prayer meetings, vacations, playdates etc.' }
   ];
 
@@ -87,7 +87,7 @@ export default function Services() {
             </div>
             <h3 className="font-mali font-medium text-[24px] mb-2 text-accent-warm">Gift Our Services</h3>
             <p className="text-[15.5px] leading-[1.6] max-w-[50ch] text-white/90">
-              The peace of mind every mother-to-be deserves, one that truly makes a difference! Friends, family, and employers can sponsor premium care packages delivering essential professional, compassionate and holistic support during this life-changing transition.
+              The peace of mind every mother-to-be deserves, one that truly makes a difference. Friends, family, and employers can sponsor premium care packages delivering essential professional, compassionate and holistic support during this life-changing transition.
             </p>
           </div>
           <div className="relative z-10 shrink-0">
