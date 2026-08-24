@@ -5,7 +5,7 @@ import premiumGiftBox from '../../public/assets/premium_gift_box.jpg';
 
 export default function Services() {
   const services = [
-    { title: 'HomeCare', photo: img3, photoLabel: 'Caregiver with mother and newborn at home', desc: 'We partner with families to develop bespoke care plans that prioritise their comfort, safety, and well-being. Premium in-home nursing care that nurtures the physical, emotional and for families who desire faith-informed encouragement through prayer, worship, and age-appropriate Bible stories.' },
+    { title: 'HomeCare', photo: img3, photoLabel: 'Caregiver with mother and newborn at home', desc: 'We partner with families to develop bespoke care plans that prioritise their comfort, safety, and well-being. Premium in-home nursing care that nurtures the physical, emotional and spiritual needs of families who desire it, with faith-informed encouragement through prayer, worship, and age-appropriate Bible stories.' },
     { title: 'Corporate Care', photo: img2, photoLabel: 'Caregivers minding a group of children at an event', desc: 'We partner with families and event organisers to provide premium care for settings that include a number of newborns, infants and children for families, companies or organisations e.g retreats, events such as birthdays, seminars, thanksgivings, short or long trips, workshops, get togethers, getaways, conferences, prayer meetings, vacations, playdates etc.' }
   ];
 
