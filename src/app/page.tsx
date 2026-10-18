@@ -7,6 +7,7 @@ import About from '../components/About';
 import Services from '../components/Services';
 import Journey from '../components/Journey';
 import Testimonials from '../components/Testimonials';
+import FullTestimonials from '../components/FullTestimonials';
 import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
@@ -25,6 +26,7 @@ export default function Home() {
       <div className="section-animate"><Services /></div>
       <div className="section-animate"><Journey /></div>
       <div className="section-animate"><Testimonials /></div>
+      <div className="section-animate"><FullTestimonials /></div>
       <div className="section-animate"><FAQ /></div>
       <div className="section-animate"><Contact /></div>
       <Footer />
