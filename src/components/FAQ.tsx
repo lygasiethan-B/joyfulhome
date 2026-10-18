@@ -34,14 +34,14 @@ export default function FAQ() {
             <div key={i} className="bg-white rounded-2xl overflow-hidden">
               <button 
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                aria-expanded={openIndex === i}
+                aria-controls={`faq-answer-${i}`}
                 className="w-full flex items-center justify-between gap-4 bg-transparent border-none cursor-pointer p-5 px-6 text-left font-mali font-semibold text-[17px] text-primary"
               >
                 <span>{faq.q}</span>
                 <span className={`flex-none text-[22px] text-secondary transition-transform duration-250 ${openIndex === i ? 'rotate-45' : ''}`}>+</span>
               </button>
-              {openIndex === i && (
-                <div className="px-6 pb-5.5 text-[15px] leading-[1.65] text-text-dark">{faq.a}</div>
-              )}
+              <div id={`faq-answer-${i}`} hidden={openIndex !== i} className="px-6 pb-5.5 text-[15px] leading-[1.65] text-text-dark">{faq.a}</div>
             </div>
           ))}
         </div>

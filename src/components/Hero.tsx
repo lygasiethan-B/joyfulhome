@@ -1,20 +1,36 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import heroImg from '../../public/assets/JoyfulHome_scene_with_logo.svg';
+import heroSmall from '../../public/assets/joyfulhome-hero-960.webp';
+import heroMedium from '../../public/assets/joyfulhome-hero-1600.webp';
+import heroLarge from '../../public/assets/joyfulhome-hero-3200.webp';
 
 export default function Hero() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden bg-black">
       
       {/* Full-width background image */}
       <div className="absolute inset-0 z-0">
-        <Image 
-          src={heroImg} 
-          alt="Mother cradling her newborn at home" 
-          fill
-          className="object-cover object-center opacity-80"
-          priority
-        />
+        <picture className="absolute inset-0 block">
+          <source
+            type="image/webp"
+            srcSet={`${heroSmall.src} 960w, ${heroMedium.src} 1600w, ${heroLarge.src} 3200w`}
+            sizes="100vw"
+          />
+          <Image
+            src={heroLarge}
+            alt="Mother cradling her newborn at home"
+            fill
+            sizes="100vw"
+            loading="eager"
+            fetchPriority="high"
+            onLoad={() => setImageLoaded(true)}
+            className={`object-cover object-center transition-opacity duration-300 motion-reduce:transition-none ${imageLoaded ? 'opacity-80' : 'opacity-0'}`}
+          />
+        </picture>
       </div>
 
       {/* Dark gradient overlay for text readability, mimicking the reference */}

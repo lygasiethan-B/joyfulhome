@@ -58,31 +58,17 @@ const jsonLdData = [
     "@type": "Organization",
     "@id": "https://joyfulhome.ug/#organization",
     "name": "JoyfulHome",
-    "alternateName": ["Joyful Home", "Joyful Home Uganda"],
     "url": "https://joyfulhome.ug",
     "logo": "https://joyfulhome.ug/assets/joyfulhome-logo-smile.png",
     "image": "https://joyfulhome.ug/assets/og-secure-booking.png",
     "email": "joyfulhome718@gmail.com",
     "telephone": "+256700143143",
-    "description": "JoyfulHome provides professional, compassionate in-home nursing and early parenthood support for mothers, newborns, and families across Uganda.",
+    "description": "Premium in-home nursing and newborn care helping mothers, babies, and families begin parenthood with confidence.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kampala",
       "addressCountry": "UG"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Uganda"
-    },
-    "knowsAbout": [
-      "In-Home Nursing Care",
-      "Newborn Care",
-      "Maternal Health",
-      "Postpartum Recovery",
-      "Infant Care",
-      "Pediatric Nursing",
-      "Corporate Event Childcare"
-    ]
+    }
   },
   {
     "@context": "https://schema.org",
@@ -90,7 +76,7 @@ const jsonLdData = [
     "@id": "https://joyfulhome.ug/#website",
     "url": "https://joyfulhome.ug",
     "name": "JoyfulHome",
-    "description": "Helping Families Begin with Confidence | JoyfulHome",
+    "description": "Premium in-home nursing and newborn care helping mothers, babies, and families begin parenthood with confidence.",
     "publisher": {
       "@id": "https://joyfulhome.ug/#organization"
     },
@@ -102,13 +88,9 @@ const jsonLdData = [
     "@id": "https://joyfulhome.ug/#service-homecare",
     "name": "HomeCare",
     "serviceType": "In-Home Nursing & Newborn Care",
-    "description": "We partner with families to develop bespoke care plans that prioritise their comfort, safety, and well-being. Premium in-home nursing care that nurtures the physical, emotional and for families who desire it faith-informed encouragement through prayer, worship, and age-appropriate Bible stories.",
+    "description": "We partner with families to develop bespoke care plans that prioritise their comfort, safety, and well-being. Premium in-home nursing care that nurtures the physical, emotional and spiritual needs of families who desire it, with faith-informed encouragement through prayer, worship, and age-appropriate Bible stories.",
     "provider": {
       "@id": "https://joyfulhome.ug/#organization"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Uganda"
     },
     "offers": {
       "@type": "Offer",
@@ -131,10 +113,6 @@ const jsonLdData = [
     "description": "We partner with families and event organisers to provide premium care for settings that include a number of newborns, infants and children for families, companies or organisations e.g retreats, events such as birthdays, seminars, thanksgivings, short or long trips, workshops, get togethers, getaways, conferences, prayer meetings, vacations, playdates etc.",
     "provider": {
       "@id": "https://joyfulhome.ug/#organization"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "Uganda"
     },
     "offers": {
       "@type": "Offer",
