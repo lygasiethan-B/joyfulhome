@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import navbarLogoIcon from '../../public/assets/navbar-logo-icon.png';
+import navbarLogoIcon from '../../public/assets/navbar-logo-icon-transparent.png';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
 const SECTION_IDS = ['hero', 'about', 'services', 'testimonials', 'faq', 'contact'];
