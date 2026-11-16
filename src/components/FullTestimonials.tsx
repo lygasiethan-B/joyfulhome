@@ -14,7 +14,7 @@ export default function FullTestimonials() {
   }));
 
   return (
-    <section aria-labelledby="client-experiences-title" className="bg-neutral py-20 md:py-24">
+    <section id="client-experience" aria-labelledby="client-experiences-title" className="bg-neutral py-20 md:py-24">
       <div className="max-w-[1120px] mx-auto px-6">
         <div className="text-center mb-12">
           <div className="font-passionate text-[34px] text-secondary mb-1">Client Experience</div>
@@ -114,3 +114,4 @@ export default function FullTestimonials() {
     </section>
   );
 }
+

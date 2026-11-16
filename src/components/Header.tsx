@@ -6,12 +6,13 @@ import { useRouter } from 'next/navigation';
 import navbarLogoIcon from '../../public/assets/navbar-logo-icon-transparent.png';
 import { useScrollSpy } from '../hooks/useScrollSpy';
 
-const SECTION_IDS = ['hero', 'about', 'services', 'testimonials', 'faq', 'contact'];
+const SECTION_IDS = ['hero', 'about', 'services', 'testimonials', 'client-experience', 'faq', 'contact'];
 
 const navLinks = [
   { label: 'About',        href: '#about' },
   { label: 'Services',     href: '#services' },
   { label: 'Reviews', href: '#testimonials' },
+  { label: 'Client experience', href: '#client-experience' },
   { label: 'FAQ',          href: '#faq' },
   { label: 'Contact',      href: '#contact' },
 ];
